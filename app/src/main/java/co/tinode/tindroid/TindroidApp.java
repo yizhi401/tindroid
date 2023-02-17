@@ -175,7 +175,7 @@ public class TindroidApp extends Application implements DefaultLifecycleObserver
         }
 
         // Disable Crashlytics for debug builds.
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG);
+//        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG);
 
         BroadcastReceiver br = new BroadcastReceiver() {
             @Override

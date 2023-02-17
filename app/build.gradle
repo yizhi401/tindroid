@@ -1,24 +1,24 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
-apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+//apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
 // See explanation here: https://stackoverflow.com/questions/20562189/sign-apk-without-putting-keystore-info-in-build-gradle
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+//def keystorePropertiesFile = rootProject.file("keystore.properties")
+//def keystoreProperties = new Properties()
+//keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     compileSdkVersion 33
 
-    signingConfigs {
-        release {
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file(keystoreProperties['storeFile'])
+//            storePassword keystoreProperties['storePassword']
+//            keyAlias keystoreProperties['keyAlias']
+//            keyPassword keystoreProperties['keyPassword']
+//        }
+//    }
 
     defaultConfig {
         applicationId "co.tinode.tindroidx"
@@ -40,13 +40,13 @@ android {
         debug {
             resValue "string", "default_host_name", '"sandbox.tinode.co"'
         }
-        release {
-            resValue "string", "default_host_name", '"api.tinode.co"'
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-        }
+//        release {
+//            resValue "string", "default_host_name", '"api.tinode.co"'
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//        }
     }
 
     compileOptions {

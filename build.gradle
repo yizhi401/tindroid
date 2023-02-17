@@ -2,9 +2,12 @@
 
 buildscript {
     repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://maven.google.com/' }
+//        google()
+//        mavenCentral()
+//        maven { url 'https://maven.google.com/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
@@ -32,10 +35,13 @@ ext {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-        maven { url 'https://maven.google.com/' }
+//        google()
+//        mavenCentral()
+//        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter/' }
+//        maven { url 'https://maven.google.com/' }
         flatDir {
             dirs 'src/main/libs'
         }
