@@ -10,7 +10,7 @@
     <string name="copyright" translatable="false">© 2014 – 2023 AiGirls</string>
     <string name="tinode" translatable="false">AiGirls</string>
 
-    <string name="login_hint">Login</string>
+    <string name="login_hint">Enter the invitation code</string>
     <string name="password_hint">Password</string>
     <string name="new_message_hint">New message</string>
     <string name="send_message_button_hint">Send message</string>

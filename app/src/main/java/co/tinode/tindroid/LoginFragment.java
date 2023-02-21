@@ -18,7 +18,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
+
 import co.tinode.tindroid.account.Utils;
+import co.tinode.tindroid.utils.Base64Encoder;
 import co.tinode.tinodesdk.PromisedReply;
 import co.tinode.tinodesdk.Tinode;
 import co.tinode.tinodesdk.model.AuthScheme;
@@ -63,6 +65,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         fragment.findViewById(R.id.signIn).setOnClickListener(this);
         fragment.findViewById(R.id.forgotPassword).setOnClickListener(this);
 
+        System.out.println(Base64Encoder.Encode("yizhi:123456"));
+
         return fragment;
     }
 
@@ -93,16 +97,26 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         EditText loginInput = parent.findViewById(R.id.editLogin);
         EditText passwordInput = parent.findViewById(R.id.editPassword);
 
-        final String login = loginInput.getText().toString().trim();
-        if (login.isEmpty()) {
+        final String inviteCode = loginInput.getText().toString().trim();
+        if (inviteCode.isEmpty()) {
             loginInput.setError(getText(R.string.login_required));
             return;
         }
-        final String password = passwordInput.getText().toString().trim();
-        if (password.isEmpty()) {
-            passwordInput.setError(getText(R.string.password_required));
+        String _decoded = Base64Encoder.Decode(inviteCode);
+        String[] _split = _decoded.split(":");
+        if (_split.length != 2) {
+            loginInput.setError(getText(R.string.invalid_login));
             return;
         }
+        final String login = _split[0];
+        final String password = _split[1];
+
+        // 目前只接受邀请码登录
+//        final String password = passwordInput.getText().toString().trim();
+//        if (password.isEmpty()) {
+//            passwordInput.setError(getText(R.string.password_required));
+//            return;
+//        }
 
         final Button signIn = parent.findViewById(R.id.signIn);
         signIn.setEnabled(false);

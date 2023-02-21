@@ -9,7 +9,7 @@
     <string name="send_image_button_hint">发送图片</string>
     <string name="send_file_button_hint">发送文件</string>
 
-    <string name="sign_in">登入</string>
+    <string name="sign_in">输入邀请码</string>
     <string name="action_signup">注册</string>
     <string name="sign_up">注册</string>
     <string name="login_new">登录</string>

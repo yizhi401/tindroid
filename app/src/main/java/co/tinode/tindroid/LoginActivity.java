@@ -1,5 +1,8 @@
 package co.tinode.tindroid;
 
+import static co.tinode.tindroid.utils.Base64Encoder.Decode;
+import static co.tinode.tindroid.utils.Base64Encoder.Encode;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -19,7 +22,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.PreferenceManager;
+
 import co.tinode.tindroid.db.BaseDb;
+import co.tinode.tindroid.utils.Base64Encoder;
 
 /**
  * LoginActivity is a FrameLayout which switches between fragments:
