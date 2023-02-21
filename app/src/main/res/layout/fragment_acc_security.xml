@@ -14,10 +14,11 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/change_password"
         android:drawablePadding="4sp"
+        android:visibility="invisible"
         android:text="@string/change_password"
         android:textColor="?android:textColorPrimary"
-        app:drawableTint="?android:textColorPrimary"
-        app:drawableStartCompat="@drawable/ic_lock_outline" />
+        app:drawableStartCompat="@drawable/ic_lock_outline"
+        app:drawableTint="?android:textColorPrimary" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogout"
@@ -28,8 +29,8 @@
         android:drawablePadding="4sp"
         android:text="@string/logout"
         android:textColor="@color/colorDanger"
-        app:drawableTint="@color/colorDanger"
-        app:drawableStartCompat="@drawable/ic_exit_red" />
+        app:drawableStartCompat="@drawable/ic_exit_red"
+        app:drawableTint="@color/colorDanger" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDeleteAccount"
@@ -40,8 +41,9 @@
         android:drawablePadding="4sp"
         android:text="@string/delete_account"
         android:textColor="@color/colorDanger"
-        app:drawableTint="@color/colorDanger"
-        app:drawableStartCompat="@drawable/ic_delete_red" />
+        android:visibility="invisible"
+        app:drawableStartCompat="@drawable/ic_delete_red"
+        app:drawableTint="@color/colorDanger" />
 
     <View
         android:layout_width="match_parent"
@@ -52,13 +54,13 @@
 
     <androidx.legacy.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="6dp"/>
+        android:layout_height="6dp" />
 
     <TextView
         style="@style/sectionTitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/default_permissions"/>
+        android:text="@string/default_permissions" />
 
     <TextView
         style="?android:textAppearanceSmall"
@@ -68,24 +70,22 @@
 
     <androidx.legacy.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="6dp"/>
+        android:layout_height="6dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:textAppearance="?android:textAppearanceMedium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:text="@string/auth_permissions"/>
+            android:text="@string/auth_permissions"
+            android:textAppearance="?android:textAppearanceMedium" />
 
         <TextView
             android:id="@+id/authPermissions"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/dotted_line"
@@ -93,32 +93,32 @@
             android:focusable="true"
             android:focusableInTouchMode="false"
             android:fontFamily="monospace"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="?android:textColorPrimary"
             android:textIsSelectable="false"
             android:typeface="monospace"
-            tools:text="RWPD"/>
+            tools:text="RWPD" />
 
     </LinearLayout>
 
     <androidx.legacy.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="6dp"/>
+        android:layout_height="6dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:textAppearance="?android:textAppearanceMedium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:text="@string/anon_permissions"/>
+            android:text="@string/anon_permissions"
+            android:textAppearance="?android:textAppearanceMedium" />
 
         <TextView
             android:id="@+id/anonPermissions"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/dotted_line"
@@ -126,9 +126,11 @@
             android:focusable="true"
             android:focusableInTouchMode="false"
             android:fontFamily="monospace"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="?android:textColorPrimary"
             android:textIsSelectable="false"
             android:typeface="monospace"
-            tools:text="RWPD"/>
+            tools:text="RWPD" />
     </LinearLayout>
 
     <LinearLayout
@@ -139,7 +141,7 @@
 
         <androidx.legacy.widget.Space
             android:layout_width="match_parent"
-            android:layout_height="6dp"/>
+            android:layout_height="6dp" />
 
         <View
             android:layout_width="match_parent"
@@ -158,8 +160,8 @@
             android:text="@string/blocked_contacts"
             android:textColor="?android:textColorPrimary"
             android:visibility="invisible"
-            app:drawableTint="?android:textColorPrimary"
-            app:drawableStartCompat="@drawable/ic_block" />
+            app:drawableStartCompat="@drawable/ic_block"
+            app:drawableTint="?android:textColorPrimary" />
 
     </LinearLayout>
 

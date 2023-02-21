@@ -125,7 +125,7 @@ public class AccountInfoFragment extends Fragment implements ChatsActivity.FormU
 
     @Override
     public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
-        menuInflater.inflate(R.menu.menu_edit, menu);
+//        menuInflater.inflate(R.menu.menu_edit, menu);
     }
 
     @Override
