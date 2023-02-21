@@ -65,7 +65,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         fragment.findViewById(R.id.signIn).setOnClickListener(this);
         fragment.findViewById(R.id.forgotPassword).setOnClickListener(this);
 
-        System.out.println(Base64Encoder.Encode("yizhi:123456"));
+//        System.out.println(Base64Encoder.Encode("yizhi:123456"));
 
         return fragment;
     }

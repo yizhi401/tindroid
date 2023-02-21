@@ -41,7 +41,8 @@
             android:id="@+id/editLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="VjJ4YWEyTXdOWFJTYTJob1pXeHdUMVpyVm5OT2JGSnlWV3hhVG1KVk1UVmFWV2hEWVcxRmVWVnVaRlpXYTFVMVZVWm9UMk15UmxsVGEyaG9WbFZWT1dNeWVIQmphMlJ3VVZFOVBYTnNhWEpIYVVFPXNsaXJHaUE=" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

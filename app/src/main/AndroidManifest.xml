@@ -83,13 +83,13 @@
             android:resource="@string/asset_statements"/>
 
         <!-- Default icon for push notifications. -->
-        <meta-data
+        <!-- <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_icon_push" />
+            android:resource="@drawable/ic_icon_push" /> -->
         <!-- Default color for push notifications. -->
-        <meta-data
+        <!-- <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccent" />
+            android:resource="@color/colorAccent" /> -->
 
         <activity
             android:name=".SplashActivity"
@@ -212,12 +212,12 @@
         <!-- FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true".
              Using tools:ignore="ExportedService" to disable the warning -->
-        <service android:name=".services.FBaseMessagingService"
+        <!-- <service android:name=".services.FBaseMessagingService"
             android:exported="true" tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
+        </service> -->
         <!-- Service to place and receive calls. -->
         <service android:name=".services.CallConnectionService"
             android:exported="true"
