@@ -101,7 +101,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             return;
         }
         String _decoded = Base64Encoder.Decode(inviteCode);
-        String[] _split = _decoded.split(":");
+        String[] _split = _decoded.split("/");
         if (_split.length != 2) {
             loginInput.setError(getText(R.string.invalid_login));
             return;
@@ -138,7 +138,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         new PromisedReply.SuccessListener<ServerMessage>() {
                             @Override
                             public PromisedReply<ServerMessage> onSuccess(final ServerMessage msg) {
-                                sharedPref.edit().putString(LoginActivity.PREFS_LAST_LOGIN, login).apply();
+                                sharedPref.edit().putString(LoginActivity.PREFS_LAST_LOGIN, inviteCode).apply();
 
                                 UiUtils.updateAndroidAccount(parent, tinode.getMyId(),
                                         AuthScheme.basicInstance(login, password).toString(),

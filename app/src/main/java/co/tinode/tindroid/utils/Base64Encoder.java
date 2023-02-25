@@ -3,8 +3,8 @@ package co.tinode.tindroid.utils;
 import android.util.Base64;
 
 public class Base64Encoder {
-    private static final String SALT = "slirGiA";
-    private static final int REPEAT = 5;
+    private static final String SALT = "";
+    private static final int REPEAT = 1;
 
     public static String Encode(String str) {
         String salted = str + SALT;
