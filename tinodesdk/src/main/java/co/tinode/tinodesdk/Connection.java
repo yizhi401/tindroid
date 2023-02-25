@@ -67,9 +67,9 @@ public class Connection extends WebSocketClient {
         mBackground = false;
     }
 
-    private static Map<String,String> wrapApiKey(String apikey) {
+    private static Map<String, String> wrapApiKey(String apikey) {
         Map<String, String> headers = new HashMap<>();
-        headers.put("X-Tinode-APIKey",apikey);
+        headers.put("X-Tinode-APIKey", apikey);
         return headers;
     }
 
@@ -118,6 +118,7 @@ public class Connection extends WebSocketClient {
                     // SNI: Verify server host name.
                     SSLSession sess = ((SSLSocket) getSocket()).getSession();
                     String hostName = uri.getHost();
+                    Log.i(TAG, "Connecting " + hostName);
                     if (!HttpsURLConnection.getDefaultHostnameVerifier().verify(hostName, sess)) {
                         close();
                         throw new SSLHandshakeException("SNI verification failed. Expected: '" + uri.getHost() +
@@ -136,7 +137,7 @@ public class Connection extends WebSocketClient {
     /**
      * Establish a connection with the server. It opens or reopens a websocket in a separate
      * thread.
-     *
+     * <p>
      * This is a non-blocking call.
      *
      * @param autoReconnect if connection is dropped, reconnect automatically
@@ -169,7 +170,7 @@ public class Connection extends WebSocketClient {
     /**
      * Gracefully close websocket connection. The socket will attempt
      * to send a frame to the server.
-     *
+     * <p>
      * The call is idempotent: if connection is already closed it does nothing.
      */
     @SuppressWarnings("WeakerAccess")
@@ -205,6 +206,7 @@ public class Connection extends WebSocketClient {
     public boolean isWaitingToReconnect() {
         return mStatus == State.WAITING_TO_RECONNECT;
     }
+
     /**
      * Reset exponential backoff counter to zero.
      * If autoreconnect is true and WsListener is provided, then WsListener.onConnect must call

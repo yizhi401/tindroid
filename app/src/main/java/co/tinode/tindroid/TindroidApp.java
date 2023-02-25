@@ -54,6 +54,7 @@ import androidx.lifecycle.ProcessLifecycleOwner;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 import androidx.work.WorkManager;
+
 import co.tinode.tindroid.account.ContactsObserver;
 import co.tinode.tindroid.account.Utils;
 import co.tinode.tindroid.db.BaseDb;
@@ -103,13 +104,16 @@ public class TindroidApp extends Application implements DefaultLifecycleObserver
     }
 
     public static String getDefaultHostName(Context context) {
-        return context.getResources().getString(isEmulator() ?
-                R.string.emulator_host_name :
-                R.string.default_host_name);
+//        return context.getResources().getString(isEmulator() ?
+//                R.string.emulator_host_name :
+//                R.string.default_host_name);
+        return context.getResources().getString(R.string.emulator_host_name);
     }
 
     public static boolean getDefaultTLS() {
-        return !isEmulator();
+//        return !isEmulator();
+        // Disable tls now.
+        return false;
     }
 
     public static void retainCache(Cache cache) {
@@ -300,10 +304,10 @@ public class TindroidApp extends Application implements DefaultLifecycleObserver
                     NotificationManager.IMPORTANCE_HIGH);
             videoCall.setDescription(getString(R.string.video_call_channel_description));
             videoCall.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE),
-                            new AudioAttributes.Builder()
-                                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                                    .setUsage(AudioAttributes.USAGE_NOTIFICATION_RINGTONE)
-                                    .build());
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                            .setUsage(AudioAttributes.USAGE_NOTIFICATION_RINGTONE)
+                            .build());
             videoCall.setVibrationPattern(new long[]{0, 1000, 500, 1000});
             videoCall.enableVibration(true);
             videoCall.enableLights(true);

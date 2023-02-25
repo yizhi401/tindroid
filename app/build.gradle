@@ -38,10 +38,10 @@ android {
 
     buildTypes {
         debug {
-            resValue "string", "default_host_name", '"sandbox.aigirls.co"'
+            resValue "string", "default_host_name", '47.103.17.145:6060'
         }
         release {
-            resValue "string", "default_host_name", '"api.aigirls.co"'
+            resValue "string", "default_host_name", '47.103.17.145:6060'
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
