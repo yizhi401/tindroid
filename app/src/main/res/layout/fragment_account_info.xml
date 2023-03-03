@@ -14,9 +14,9 @@
         android:layout_gravity="center"
         android:layout_margin="4sp"
         android:contentDescription="@string/avatar"
-        app:strokeColor="@android:color/transparent"
         app:shapeAppearanceOverlay="@style/roundImageView"
-        app:srcCompat="@drawable/disk" />
+        app:srcCompat="@drawable/disk"
+        app:strokeColor="@android:color/transparent" />
 
     <TextView
         android:id="@+id/topicTitle"
@@ -48,8 +48,8 @@
             android:id="@+id/topicAddress"
             style="?android:textAppearanceMedium"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:clickable="false"
             android:ellipsize="end"
             android:focusable="false"
@@ -209,7 +209,8 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical"
-        android:minHeight="?attr/listPreferredItemHeight">
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/icon_help"

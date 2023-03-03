@@ -90,10 +90,11 @@ public class ChatsFragment extends Fragment implements ActionMode.Callback, UiUt
                 bar.setDisplayHomeAsUpEnabled(false);
                 bar.setTitle(R.string.app_name);
             }
-            view.findViewById(R.id.startNewChat).setOnClickListener(view1 -> {
-                Intent intent = new Intent(activity, StartChatActivity.class);
-                startActivity(intent);
-            });
+            // Disable start new chat functionality.
+//            view.findViewById(R.id.startNewChat).setOnClickListener(view1 -> {
+//                Intent intent = new Intent(activity, StartChatActivity.class);
+//                startActivity(intent);
+//            });
         }
 
         RecyclerView rv = view.findViewById(R.id.chat_list);
