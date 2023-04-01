@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "co.tinode.tindroidx"
+        applicationId "com.monkeyhand.puppet"
         minSdkVersion 24
         targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true

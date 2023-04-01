@@ -10,7 +10,7 @@
 # Add any project specific keep options here:
 
 # Classes which define json wire protocol.
--keep class co.tinode.tinodesdk.model.** { *; }
+-keep class com.monkeyhand.puppet.model.** { *; }
 
 -keepattributes *Annotation*,EnclosingMethod,Signature
 -keepattributes SourceFile,LineNumberTable
